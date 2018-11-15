@@ -22,9 +22,5 @@ Game.prototype.addO = function(row, column) {
 
 Game.prototype.spaceIsAvailable = function(row, column) {
   let choice = this.scoreboard[row - 1][column - 1]
-  if (choice === "X" || choice === "O") {
-    return false
-  } else {
-    return true
-  }
+  return (choice !== "X" && choice !== "O") ? true : false
 }
