@@ -9,19 +9,22 @@ function Game() {
 }
 
 Game.prototype.addX = function(row, column) {
-  let choice = this.scoreboard[row - 1][column - 1]
-  if (choice === "O") {
-    this.scoreboard[row - 1][column - 1] = "O"
-  } else {
+  if (this.isAvailable(row, column)) {
     this.scoreboard[row - 1][column - 1] = "X"
   }
 }
 
 Game.prototype.addO = function(row, column) {
-  let choice = this.scoreboard[row - 1][column - 1]
-  if (choice === "X") {
-    this.scoreboard[row - 1][column - 1] = "X"
-  } else {
+  if (this.isAvailable(row, column)) {
     this.scoreboard[row - 1][column - 1] = "O"
+  }
+}
+
+Game.prototype.isAvailable = function(row, column) {
+  let choice = this.scoreboard[row - 1][column - 1]
+  if (choice === "X" || choice === "O") {
+    return false
+  } else {
+    return true
   }
 }
