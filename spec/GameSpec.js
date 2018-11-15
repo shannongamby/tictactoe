@@ -1,7 +1,7 @@
 'use strict';
 
 describe("Game", function() {
-  var game;
+  let game;
 
   beforeEach(function() {
     game = new Game();
@@ -21,12 +21,17 @@ describe("Game", function() {
     game.addX(2,2)
     game.addO(2,2)
     expect(game.scoreboard[1][1]).toEqual('X')
-  })
+  });
 
   it("doesn't allow addition of X if O already present", function() {
     game.addO(2,2)
     game.addX(2,2)
     expect(game.scoreboard[1][1]).toEqual('O')
-  })
+  });
+
+  it("stops the game after 9 turns", function() {
+    game.turn = 8
+    expect(game.addO(1,1)).toEqual("Game Over")
+  });
 
 });
