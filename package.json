@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "./node_modules/.bin/istanbul cover jasmine-node spec/"
+    "test": "istanbul cover jasmine-node spec/"
   },
   "repository": {
     "type": "git",
