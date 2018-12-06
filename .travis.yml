@@ -5,3 +5,5 @@ npm:
 script:
   - npm install
   - npm test
+
+after success: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

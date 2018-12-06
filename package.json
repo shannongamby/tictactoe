@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jasmine spec/*"
+    "test": "./node_modules/.bin/istanbul cover jasmine spec/*"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/shannongamby/tictactoe#readme",
   "dependencies": {
+    "istanbul": "^0.4.5",
     "jasmine": "^3.3.1"
   },
   "devDependencies": {
