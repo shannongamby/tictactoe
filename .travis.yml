@@ -4,4 +4,6 @@ npm:
 
 script:
   - npm install
-  - npm test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+  - npm test
+  - npm run gcoverage
+  - npm run report-coverage
