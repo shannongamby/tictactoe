@@ -5,6 +5,7 @@ npm:
 script:
   - npm install
   - npm test
+  - npm check-coverage
 
 after_success:
   - npm run coverage
