@@ -1,0 +1,28 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jasmine spec/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shannongamby/tictactoe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shannongamby/tictactoe/issues"
+  },
+  "homepage": "https://github.com/shannongamby/tictactoe#readme",
+  "dependencies": {
+    "jasmine": "^3.3.1"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2"
+  }
+}

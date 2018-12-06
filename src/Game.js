@@ -1,31 +1,44 @@
 'use strict';
 
-function Game() {
+class Game {
+  constructor() {
   this.scoreboard = [
                      ["1","2","3"],
                      ["4","5","6"],
                      ["7","8","9"]
                     ]
   this.turn = 0
-}
-
-Game.prototype.addX = function(row, column) {
-  if (this.spaceIsAvailable(row, column)) {
-    this.scoreboard[row - 1][column - 1] = "X"
-    this.turn += 1
   }
-  if (this.turn === 9) return "Game Over"
-}
 
-Game.prototype.addO = function(row, column) {
-  if (this.spaceIsAvailable(row, column)) {
-    this.scoreboard[row - 1][column - 1] = "O"
-    this.turn += 1
+  addX(row, column) {
+    if (this.spaceIsAvailable(row, column)) {
+      this.scoreboard[row - 1][column - 1] = "X"
+      this.turn += 1
+    }
+    if (this.turn === 9 || this.playerWon()) return "Game Over"
   }
-  if (this.turn === 9) return "Game Over"
-}
 
-Game.prototype.spaceIsAvailable = function(row, column) {
-  let choice = this.scoreboard[row - 1][column - 1]
-  return (choice !== "X" && choice !== "O") ? true : false
+  addO(row, column) {
+    if (this.spaceIsAvailable(row, column)) {
+      this.scoreboard[row - 1][column - 1] = "O"
+      this.turn += 1
+    }
+    if (this.turn === 9 || this.playerWon()) return "Game Over"
+  }
+
+  spaceIsAvailable(row, column) {
+    let chosen_space = this.scoreboard[row - 1][column - 1]
+    return (chosen_space !== "X" && chosen_space !== "O") ? true : false
+  }
+
+  playerWon() {
+    if (this.scoreboard[0][0] === this.scoreboard[0][1] &&
+        this.scoreboard[0][1] === this.scoreboard[0][2]
+      ) {
+        return true
+      } else {
+        return false
+    }
+  }
 }
+module.exports = Game;
