@@ -10,7 +10,7 @@
     "test": "jasmine-node spec/",
     "coverage": "istanbul cover jasmine-node spec/",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
-    "check-coverage": "istanbul check-coverage --statements 90 --branches 90 --functions 90 --lines 90"
+    "check-coverage": "istanbul cover jasmine-node spec/ --statements 90 --branches 90 --functions 90 --lines 90"
   },
   "repository": {
     "type": "git",
