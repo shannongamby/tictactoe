@@ -5,5 +5,5 @@ npm:
 script:
   - npm install
   - npm test
-  - npm run gcoverage
+  - npm run coverage
   - npm run report-coverage
