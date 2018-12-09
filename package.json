@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/shannongamby/tictactoe#readme",
   "dependencies": {
+    "eslint": "^5.9.0",
     "istanbul": "^0.4.5",
     "jasmine": "^3.3.1",
     "jasmine-node": "^1.16.2"
