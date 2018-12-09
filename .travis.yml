@@ -1,4 +1,6 @@
-language: node.js
+language:
+- node.js
+
 npm:
 - 6.4.1
 

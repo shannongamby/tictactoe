@@ -1,2 +1,4 @@
-// function Player() {
-// }
+class Player {
+  constructor() {
+  }
+}
